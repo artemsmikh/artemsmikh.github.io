@@ -1,0 +1,13 @@
+<div class="footer">
+  <span class="block">
+    {% if site.twitter_username %}
+      <a href="https://twitter.com/{{ site.twitter_username }}" title="Twitter">twitter</a> | 
+    {% endif %}    
+    {% if site.github_username %}
+      <a href="https://github.com/{{ site.github_username }}" title="Github">github</a> | 
+    {% endif %}
+    <a href="mailto:{{ site.author_email }}" title="Contact me via e-mail">e-mail</a>
+  </span>
+  <br/>
+  <span class="block"><small>&copy; {{ site.time | date: '%Y' }} {{ site.author_name }}</small></span>
+</div>

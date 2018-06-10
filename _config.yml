@@ -1,0 +1,87 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+# Site Info
+title:              "Artem Mikhailov"
+description:        "iOS Applications Developer"
+
+# Google APIs
+google_verify:      false # Your Google Verification - set to 'false' to disable
+google_analytics:   false # Your Google Analytics code - set to 'false' to disable
+
+# Author Info
+author_name:        "Artem Mikhailov"
+author_short_name:  "Artem M"
+author_email:       artemsmikh@gmail.com
+author_gravatar:    10721df6b0908dd42aa5fd2d4def41cb # Gravatar md5 hash (of email) here for logo - set to 'false' to disable
+twitter_username:   artemsmikh # set to 'false' to disable
+github_username:    artemsmikh # set to 'false' to disable
+
+# Site Settings
+url:                https://artemsmikh.me # main url
+baseurl:            "" # for gh-pages
+permalink:          /notes/:title # Post permalink
+timezone:           Europe/Moscow # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+mathjax:            true  # enables support for mathjax - set to 'false' to disable
+
+# Site Build
+highlighter:        rouge
+markdown:           kramdown
+kramdown:
+    input:          GFM
+sass:
+    style:          :compressed
+    
+theme: the-plain
+
+# Other Params
+include:            [ "robots.txt" ]
+exclude:            [ "LICENSE", "README.md", "CNAME", "vendor", "Gemfile" ]
+plugins:
+  - jekyll-sitemap
+  - jekyll-remote-theme
+
+
+
+defaults:
+  -
+    scope:
+      path:         ""
+    values:
+      layout:       "null"
+  -
+    scope:
+      type:         "pages"
+    values:
+      layout:       "page"
+  -
+    scope:
+      type:         "posts"
+    values:
+      layout:       "post"
+
+#remote_theme: heiswayi/the-plain
+
+# Exclude from processing.
+# The following items will not be processed, by default. Create a custom list
+# to override the default setting.
+# exclude:
+#   - Gemfile
+#   - Gemfile.lock
+#   - node_modules
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/
