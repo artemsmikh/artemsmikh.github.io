@@ -43,8 +43,6 @@ kramdown:
     input:          GFM
 sass:
     style:          :compressed
-    
-theme: the-plain
 
 # Other Params
 include:            [ "robots.txt" ]
@@ -53,7 +51,7 @@ plugins:
   - jekyll-sitemap
   - jekyll-remote-theme
 
-
+remote_theme: heiswayi/the-plain
 
 defaults:
   -
@@ -71,8 +69,6 @@ defaults:
       type:         "posts"
     values:
       layout:       "post"
-
-#remote_theme: heiswayi/the-plain
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
