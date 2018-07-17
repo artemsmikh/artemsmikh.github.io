@@ -18,7 +18,7 @@ title:              "Artem Mikhailov"
 description:        "iOS Applications Developer"
 
 #theme: the-plain
-remote_theme: heiswayi/the-plain
+remote_theme: heiswayi/the-plain@v3.1.0
 
 # Google APIs
 google_verify:      false # Your Google Verification - set to 'false' to disable
