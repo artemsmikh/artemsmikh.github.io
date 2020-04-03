@@ -28,7 +28,7 @@ google_analytics:   false # Your Google Analytics code - set to 'false' to disab
 author_name:        "Artem Mikhailov"
 author_short_name:  "Artem M"
 author_email:       artemsmikh@gmail.com
-author_gravatar:    10721df6b0908dd42aa5fd2d4def41cb # Gravatar md5 hash (of email) here for logo - set to 'false' to disable
+author_gravatar:    6130728fb7939ba0d652b29fc59be367 # Gravatar md5 hash (of email) here for logo - set to 'false' to disable
 twitter_username:   artemsmikh # set to 'false' to disable
 github_username:    artemsmikh # set to 'false' to disable
 

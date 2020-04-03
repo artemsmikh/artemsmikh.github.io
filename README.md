@@ -1,6 +1,6 @@
 ### About
 
-My website.
+A personal page.
 
 ### License
 
