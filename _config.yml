@@ -29,8 +29,11 @@ author_name:        "Artem Mikhailov"
 author_short_name:  "Artem M"
 author_email:       artemsmikh@gmail.com
 author_gravatar:    6130728fb7939ba0d652b29fc59be367 # Gravatar md5 hash (of email) here for logo - set to 'false' to disable
-twitter_username:   artemsmikh # set to 'false' to disable
+twitter_username:   false # set to 'false' to disable
 github_username:    artemsmikh # set to 'false' to disable
+linkedin_username:  artemsmikh # set to 'false' to disable
+upwork_link:        https://www.upwork.com/freelancers/~010e9b9c1b6f0162e2 # set to 'false' to disable
+cv_link:            https://artemsmikh.me/cv.pdf # set to 'false' to disable
 
 # Site Settings
 url:                https://artemsmikh.me # main url
