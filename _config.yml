@@ -33,7 +33,7 @@ twitter_username:   artemsmikh # set to 'false' to disable
 github_username:    artemsmikh # set to 'false' to disable
 
 # Site Settings
-url:                http://artemsmikh.me # main url
+url:                https://artemsmikh.me # main url
 baseurl:            "" # for gh-pages
 permalink:          /notes/:title # Post permalink
 timezone:           Europe/Moscow # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
