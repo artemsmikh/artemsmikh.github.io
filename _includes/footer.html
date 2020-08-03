@@ -1,22 +1,25 @@
 <div class="footer">
-  <span class="block">
-    {% if site.linkedin_username %}
-      <a href="https://www.linkedin.com/in/{{ site.linkedin_username }}" title="LinkedIn profile link">linkedin</a> | 
-    {% endif %}
-    {% if site.upwork_link %}
-      <a href="{{ site.upwork_link }}" title="Upwork profile link">upwork</a> | 
-    {% endif %}
-    {% if site.cv_link %}
-      <a href="{{ site.cv_link }}" title="CV">CV</a> | 
-    {% endif %}
-    {% if site.twitter_username %}
-      <a href="https://twitter.com/{{ site.twitter_username }}" title="Twitter">twitter</a> | 
-    {% endif %}    
-    {% if site.github_username %}
-      <a href="https://github.com/{{ site.github_username }}" title="Github">github</a> | 
-    {% endif %}
-    <a href="mailto:{{ site.author_email }}" title="Contact me via e-mail">e-mail</a>
-  </span>
-  <br/>
+
+	{% if page.url == '/index.html' or page.url == '/' %}
+    <span class="block">
+      {% if site.linkedin_username %}
+        <a href="https://www.linkedin.com/in/{{ site.linkedin_username }}" title="LinkedIn profile link">linkedin</a> | 
+      {% endif %}
+      {% if site.upwork_link %}
+        <a href="{{ site.upwork_link }}" title="Upwork profile link">upwork</a> | 
+      {% endif %}
+      {% if site.cv_link %}
+        <a href="{{ site.cv_link }}" title="CV">CV</a> | 
+      {% endif %}
+      {% if site.twitter_username %}
+        <a href="https://twitter.com/{{ site.twitter_username }}" title="Twitter">twitter</a> | 
+      {% endif %}    
+      {% if site.github_username %}
+        <a href="https://github.com/{{ site.github_username }}" title="Github">github</a> | 
+      {% endif %}
+      <a href="mailto:{{ site.author_email }}" title="Contact me via e-mail">e-mail</a>
+    </span>
+    <br/>
+	{% endif %}
   <span class="block"><small>&copy; {{ site.time | date: '%Y' }} {{ site.author_name }}</small></span>
 </div>

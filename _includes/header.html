@@ -5,13 +5,15 @@
 		{% assign prompt = 'Back to Home' %}
 	{% endif %}
 
-	{% if site.author_gravatar %}
-		{% assign default_avatar = "https://www.gravatar.com/avatar/" | append: site.author_gravatar | append: ".png?s=80" %}
-		{% assign retina_avatar = "https://www.gravatar.com/avatar/" | append: site.author_gravatar | append: ".png?s=160" %}
-		<a href="{{ link | prepend: site.baseurl }}">
-			<img src="{{ default_avatar }}" srcset="{{ default_avatar }} 1x, {{ retina_avatar }} 2x" class="gravatar">
-		</a>
-		<span class="logo-prompt">{{ prompt }}</span>
+	{% if page.url == '/index.html' or page.url == '/' %}	
+		{% if site.author_gravatar %}
+			{% assign default_avatar = "https://www.gravatar.com/avatar/" | append: site.author_gravatar | append: ".png?s=80" %}
+			{% assign retina_avatar = "https://www.gravatar.com/avatar/" | append: site.author_gravatar | append: ".png?s=160" %}
+			<a href="{{ link | prepend: site.baseurl }}">
+				<img src="{{ default_avatar }}" srcset="{{ default_avatar }} 1x, {{ retina_avatar }} 2x" class="gravatar">
+			</a>
+			<span class="logo-prompt">{{ prompt }}</span>
+		{% endif %}
 	{% endif %}
 
 </aside>
