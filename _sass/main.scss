@@ -100,3 +100,17 @@ pre.highlight {
     display: inline-block !important;
   }
 }
+
+img + em {  
+  text-align: center;
+  font-size: .8rem;
+  margin-left: 5rem;
+  margin-right: 5rem;
+  margin-bottom: 2.5rem;
+  display: block;
+  overflow-wrap: break-word;
+}
+
+.h2, h2 {
+  margin-top: 2rem;
+}
