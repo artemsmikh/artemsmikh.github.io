@@ -3,11 +3,11 @@ layout: post
 title: Adding a Notification Scene to an Apple Watch App in Xcode 14
 ---
 
-As you may know, one of the best ways for an iOS developer to start learning SwiftUI from scratch is to use a [SwiftUI tutorial from Apple](https://developer.apple.com/tutorials/swiftui) in which you build a simple app called *Landmarks*. This tutorial is a great start that can help you dive into SwiftUI and Combine and build a solid foundation to learn further things.
+As you may know, one of the best ways for an iOS developer to start learning SwiftUI is to complete a [SwiftUI tutorial from Apple](https://developer.apple.com/tutorials/swiftui) in which you build a simple and neat app called *Landmarks*. This tutorial is a great start that can help you dive into SwiftUI and Combine and build a solid foundation to learn further things.
 
 Unfortunately, as of January 2023, the tutorial is still built upon using Xcode 13, even though Xcode 14.2 is the latest version that has been released to date. This might not seem like a big deal until you reach one of the latest chapters: [*Creating a watchOS App*](https://developer.apple.com/tutorials/swiftui/creating-a-watchos-app). In this chapter you create a simple watchOS Companion App for your *Landmarks* app, and do some watch-related stuff, including creating a custom Notification interface. 
 
-The problem with using Xcode 14+ for this tutorial is that at some point, the tutorial asks you to modify files that exist only if you created a watchOS target in Xcode 13. These files are: `NotificationView.swift`, `NotificationController.swift`, and  `PushNotificationPayload.apns`. It also asks you to run a scheme for the notification which does not exist if you're doing the tutorial in Xcode 14:
+The problem with using Xcode 14+ for this tutorial is that at some point, the tutorial asks you to modify files that exist only if you created a watchOS target in Xcode 13. These files are: `NotificationView.swift`, `NotificationController.swift`, and `PushNotificationPayload.apns`. It also asks you to run a notification scheme which does not exist if you're doing the tutorial in Xcode 14:
 
 ![watchOS target files when created in Xcode 13, total of 5 files]({{site.baseurl}}/assets/images/watch_landmarks/navigator_13.png){:style="display:block; margin-left:auto; margin-right:auto"}
 *watchOS target files when created in Xcode 13*
@@ -15,13 +15,13 @@ The problem with using Xcode 14+ for this tutorial is that at some point, the tu
 ![Same watchOS target files created in Xcode 14+, only 2 files]({{site.baseurl}}/assets/images/watch_landmarks/navigator_14.png){:style="display:block; margin-left:auto; margin-right:auto"}
 *Same watchOS target files created in Xcode 14+*
 
-As you may see from the pictures, Xcode 14 does not create files for custom watchOS app notifications and complications by default. For some people, it might not be a problem as you can always create the necessary files yourself if you need complications or a custom notification interface. But this is only true if you know what to create. If you haven't worked with watchOS before or if this is your first time creating an iOS app at all, you might easily get stuck here. For example, it took me a good hour to figure out whether I did something wrong during the tutorial before realizing it happened because of a newer Xcode version.
+As you may see from the screenshots, by default Xcode 14 does not create files for custom notifications and complications. For some people, it might not be a problem as you can always create the necessary files yourself. But this is only true if you know what to create. If you haven't worked with watchOS before or if this is your first time creating an iOS app at all, you might easily get stuck here. For example, it took me a good hour to figure out whether I did something wrong during the tutorial before realizing it happened because of a newer Xcode version.
 
-So, if you found yourself in the same situation and stuck doing this tutorial, here are a few steps you need to do.
+So, if you found yourself in the same situation and get stuck while doing this tutorial, here are a few steps you need to do.
 
 ## How to add a Notification Scene to a watchOS target in Xcode 14
 
-Here I assume that you have already completed all the steps in the tutorial before moving to the [Section 5 —
+Here I assume that you have already completed all the steps in the tutorial before moving on to the [Section 5 —
 Create a Custom Notification Interface](https://developer.apple.com/tutorials/swiftui/creating-a-watchos-app#Create-a-Custom-Notification-Interface). That means you already created a Landmarks app (obviously) and also created a watchOS target and did some work on its files.
 
 ### Step 1: Create a NotificationView.swift
@@ -108,17 +108,17 @@ In the same folder, create an *Empty* file (bottom of the new file screen) and c
 
 ### Step 4: Create a Notification scheme
 
-Now you need to create a scheme to run a notification with a custom view files files you just created. Click **Schemes — New Scheme…**:
+Now you need to create a scheme to run a notification with a custom view you just created. Click the scheme selector in the Xcode toolbar and select **New Scheme…** in the dropdown:
 
-![Schemes popup with New Scheme… selected]({{site.baseurl}}/assets/images/watch_landmarks/new_scheme.png){:style="display:block; margin-left:auto; margin-right:auto"}
-*Schemes popup with New Scheme… selected*
+![Schemes selector dropdown with New Scheme… selected]({{site.baseurl}}/assets/images/watch_landmarks/new_scheme.png){:style="display:block; margin-left:auto; margin-right:auto"}
+*Schemes selector dropdown with New Scheme selected*
 
-Select the Watch App as the target and add ` (Notification)` to the scheme name for the sake of clarity. Click **OK**.
+Select the Watch App as the target and add `(Notification)` to the scheme name for the sake of clarity. Click **OK**.
 
 ![New Scheme popup with the right target selected]({{site.baseurl}}/assets/images/watch_landmarks/scheme_name.png){:style="display:block; margin-left:auto; margin-right:auto"}
 *New Scheme popup with the right target selected*
 
-Click the schemes again, make sure the Notification scheme is selected, and click **Edit Scheme**. In the popup, select the *Run* row in the left panel, then change *Watch Interface* to **Dynamic Notification**. After this, the *Notification Payload* option should be automatically switched to **PushNotificationPayload.apns**.
+Click the schemes again, make sure the Notification scheme is selected, and click **Edit Scheme**. In the popup, select the *Run* row in the left panel, then change *Watch Interface* to **Dynamic Notification**. After this, the *Notification Payload* field should be automatically switched to **PushNotificationPayload.apns**.
 
 ![Edit Scheme popup after switching interface to Dynamic Notification]({{site.baseurl}}/assets/images/watch_landmarks/scheme_ready.png){:style="display:block; margin-left:auto; margin-right:auto"}
 *Edit Scheme popup after switching interface to Dynamic Notification*
@@ -131,13 +131,13 @@ Click **Close**.
 After doing the steps above, your watchOS target folder should look like this:
 
 ![New Scheme popup with the right target selected]({{site.baseurl}}/assets/images/watch_landmarks/navigator_final.png){:style="display:block; margin-left:auto; margin-right:auto"}
-*WatchLandmarks Watch App folder, 3 new files added. Notice: WatchLandmarksApp.swift is missing because it was deleted during the previous steps of Apple tutorial*
+*WatchLandmarks Watch App folder, 3 new files added. Notice: WatchLandmarksApp.swift is missing because it was deleted during the previous steps of the tutorial*
 
 You should also have a Notification scheme in the the scheme selector dropdown in the Xcode toolbar:
 
 ![Schemes panel with a Notification scheme created]({{site.baseurl}}/assets/images/watch_landmarks/schemes_final.png){:style="display:block; margin-left:auto; margin-right:auto"}
 
-From this state, you can safely continue to the [Section 5 —
+From this state, you can easily continue to the [Section 5 —
 Create a Custom Notification Interface](https://developer.apple.com/tutorials/swiftui/creating-a-watchos-app#Create-a-Custom-Notification-Interface) of the tutorial. Yay! 🎉
 
 
