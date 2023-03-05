@@ -40,6 +40,8 @@ google_analytics:
 
 permalink: /:year/:month/:day/:title/
 
+include: ['_pages']
+
 # Includes an icon in the footer for each username you enter
 footer-links:
   email: artemsmikh@gmail.com
